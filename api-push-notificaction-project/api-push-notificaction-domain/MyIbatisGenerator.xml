@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<classPathEntry location="E:\\lib\\mysql-connector-java-5.1.6.jar" />
+
+	<context id="context1" targetRuntime="MyBatis3"
+		defaultModelType="hierarchical">
+		<plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
+			<property name="searchString" value="Example$" />
+			<property name="replaceString" value="Criteria" />
+		</plugin>
+		<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" />
+		<plugin type="org.mybatis.generator.plugins.CaseInsensitiveLikePlugin" />
+
+		<!-- No generamos los comentarios -->
+		<commentGenerator>
+			<property name="suppressAllComments" value="false" />
+		</commentGenerator>
+		<!-- Parámetros de conexión a la bd -->
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://138.68.28.167:3306/demo" userId="root"
+			password="22012010Oso">
+		</jdbcConnection>
+
+		<javaModelGenerator targetPackage="com.notiificaciones.push.domain.mysql"
+			targetProject="api-push-notificaction-domain\src\main\java">
+			<property name="enableSubPackages" value="false" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="com.notiificaciones.push.dao.mysql.sqlmap"
+			targetProject="api-push-notificaction-dao\src\main\resources">
+			<property name="enableSubPackages" value="false" />
+		</sqlMapGenerator>
+
+		<!-- También podríamos indicar el tipo ANNOTATEDMAPPER -->
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.notiificaciones.push.dao.mysql" targetProject="api-push-notificaction-dao\src\main\java">
+			<property name="enableSubPackages" value="false" />
+		</javaClientGenerator>
+		<!-- Generamos el código fuente de todas las tablas evitando la generación 
+			varios métodos -->
+
+		<!-- Mapeo de Tablas START -->
+
+		<table tableName="subscripcion" domainObjectName="Subscripcion"
+			modelType="flat">
+			<property name="useActualColumnNames" value="false" />
+			<property name="constructorBased" value="false" />
+		</table>
+		
+		<table tableName="key" domainObjectName="Key"
+			modelType="flat">
+			<property name="useActualColumnNames" value="false" />
+			<property name="constructorBased" value="false" />
+		</table>
+
+		<!-- Mapeo de Tablas END -->
+
+	</context>
+</generatorConfiguration>
