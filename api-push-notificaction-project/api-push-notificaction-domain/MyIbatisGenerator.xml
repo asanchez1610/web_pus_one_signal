@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
 <generatorConfiguration>
-	<classPathEntry location="E:\\lib\\mysql-connector-java-5.1.6.jar" />
+	<classPathEntry location="D:\\lib\\mysql-connector-java-5.1.7-bin.jar" />
 
 	<context id="context1" targetRuntime="MyBatis3"
 		defaultModelType="hierarchical">
@@ -43,18 +43,12 @@
 
 		<!-- Mapeo de Tablas START -->
 
-		<table tableName="subscripcion" domainObjectName="Subscripcion"
+		<table tableName="usuario" domainObjectName="Usuario"
 			modelType="flat">
 			<property name="useActualColumnNames" value="false" />
 			<property name="constructorBased" value="false" />
 		</table>
 		
-		<table tableName="key" domainObjectName="Key"
-			modelType="flat">
-			<property name="useActualColumnNames" value="false" />
-			<property name="constructorBased" value="false" />
-		</table>
-
 		<!-- Mapeo de Tablas END -->
 
 	</context>

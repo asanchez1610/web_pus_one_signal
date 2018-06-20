@@ -13,6 +13,9 @@
         <dependent-module archiveName="api-push-notificaction-domain-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/api-push-notificaction-domain/api-push-notificaction-domain">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="api-push-notificaction-util-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/api-push-notificaction-util/api-push-notificaction-util">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="push-notification"/>
         <property name="java-output-path" value="/api-push-notificaction-rest/target/classes"/>
     </wb-module>

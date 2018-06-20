@@ -6,4 +6,11 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>api-push-notificaction-domain</artifactId>
+  <dependencies>
+  	<dependency>
+  		<groupId>com.notiificaciones.push</groupId>
+  		<artifactId>api-push-notificaction-util</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
 </project>
